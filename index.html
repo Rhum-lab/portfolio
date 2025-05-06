@@ -1,110 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Développeur Logiciel Freelance</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-      color: #333;
-    }
-    header, footer {
-      background: #222;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    .container {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-      background: white;
-    }
-    h1, h2, h3 {
-      color: #222;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>Développeur Logiciel Freelance</h1>
-    <p>C# – CAN/UDS – ESP32 – Client/Serveur</p>
+<body class="bg-gray-50 text-gray-800">
+
+  <header class="bg-white shadow p-4">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">🚀 Développeur Freelance</h1>
+      <nav>
+        <a href="#about" class="ml-4 hover:underline">À propos</a>
+        <a href="#skills" class="ml-4 hover:underline">Compétences</a>
+        <a href="#projects" class="ml-4 hover:underline">Projets</a>
+        <a href="#contact" class="ml-4 hover:underline">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="container">
-    <section class="section">
-      <h2>Présentation</h2>
-      <p>
-        Je suis développeur freelance depuis plus de 6 ans, spécialisé en conception de logiciels techniques en C# et en développement de systèmes client/serveur (PHP/MySQL, SOAP/REST).
-        Passionné par l’embarqué, j’intègre des firmwares ESP32 à des interfaces matérielles (USB, UART, CAN) pour répondre aux besoins métiers.
+  <main class="max-w-6xl mx-auto p-8">
+    <section class="text-center my-12" id="about">
+      <h2 class="text-3xl font-bold mb-4">Bonjour 👋</h2>
+      <p class="text-lg">
+        Je suis un développeur logiciel freelance passionné, spécialisé en <strong>C#</strong>, <strong>C/C++</strong>,
+        <strong>PHP</strong>, <strong>MySQL</strong> et <strong>ESP32</strong>.
+        Avec plus de 6 ans d'expérience, je conçois des logiciels client/serveur, des outils pour l'édition binaire, et des firmwares embarqués.
       </p>
     </section>
 
-    <section class="section">
-      <h2>Compétences</h2>
-      <table>
-        <tr><th>Domaine</th><th>Compétences & Outils</th><th>Niveau</th></tr>
-        <tr><td>Développement logiciel</td><td>C#, .NET, WinForms, WPF</td><td>Avancé</td></tr>
-        <tr><td>Systèmes Client/Serveur</td><td>PHP, MySQL, REST, SOAP</td><td>Avancé</td></tr>
-        <tr><td>Embarqué / IoT</td><td>ESP32, ESP-IDF, UART, USB, CDC</td><td>Avancé</td></tr>
-        <tr><td>Diagnostic automobile</td><td>CAN, CAN FD, UDS, OBD</td><td>Intermédiaire+</td></tr>
-        <tr><td>Base de données</td><td>MySQL, MariaDB, scripts SQL</td><td>Avancé</td></tr>
-        <tr><td>Sécurité & Chiffrement</td><td>RSA, AES, Base64, HKDF, SSL</td><td>Intermédiaire</td></tr>
-        <tr><td>Électronique</td><td>PCB (DipTrace), câblage OBD</td><td>Intermédiaire</td></tr>
-      </table>
+    <section id="skills" class="my-12">
+      <h2 class="text-2xl font-semibold mb-4">🧠 Compétences</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="bg-white p-4 rounded shadow">C#, WinForms, .NET</div>
+        <div class="bg-white p-4 rounded shadow">C / C++</div>
+        <div class="bg-white p-4 rounded shadow">PHP SOAP / REST</div>
+        <div class="bg-white p-4 rounded shadow">MySQL</div>
+        <div class="bg-white p-4 rounded shadow">ESP32 / ESP-IDF</div>
+        <div class="bg-white p-4 rounded shadow">CAN Bus / UDS</div>
+        <div class="bg-white p-4 rounded shadow">DipTrace / PCB Design</div>
+        <div class="bg-white p-4 rounded shadow">Client/Serveur & Sécurité</div>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Réalisations</h2>
-      <ul>
-        <li><strong>Logiciel d’édition binaire</strong> : détection automatique de structures dans des fichiers binaires via patterns ou flags, avec gestion serveur/client.</li>
-        <li><strong>Suite de réparation OBD</strong> : logiciel Windows pour reprogrammation via OBD, avec communication CAN/UDS + serveur de validation.</li>
-        <li><strong>Interface USB-CAN</strong> : firmware ESP32 avec gestion CAN FD et logiciel de lecture C#.</li>
+    <section id="projects" class="my-12">
+      <h2 class="text-2xl font-semibold mb-4">🛠️ Projets récents</h2>
+      <ul class="space-y-4">
+        <li class="bg-white p-4 rounded shadow">
+          <h3 class="text-lg font-bold">Logiciel d'édition de fichier binaire</h3>
+          <p>Application C# client avec traitement automatique via serveur PHP/MySQL pour la recherche d’offset et l’activation.</p>
+        </li>
+        <li class="bg-white p-4 rounded shadow">
+          <h3 class="text-lg font-bold">Outil de réparation OBD</h3>
+          <p>Architecture client (WinForms) + serveur (PHP/MySQL), avec protocole UDS/CAN via USB-CAN maison.</p>
+        </li>
+        <li class="bg-white p-4 rounded shadow">
+          <h3 class="text-lg font-bold">Firmware ESP32 + PCB OBD</h3>
+          <p>Développement de firmware ESP32 (ESP-IDF), traçage PCB avec DipTrace pour interface CAN FD.</p>
+        </li>
       </ul>
     </section>
 
-    <section class="section">
-      <h2>Services</h2>
-      <ul>
-        <li>Logiciels sur mesure en C#</li>
-        <li>Communication matérielle via USB, UART, CAN</li>
-        <li>Développement client/serveur sécurisé</li>
-        <li>Intégration embarquée ESP32</li>
-        <li>Conseil pour projets hardware/software</li>
-      </ul>
+    <section id="contact" class="my-12 text-center">
+      <h2 class="text-2xl font-semibold mb-4">📬 Me contacter</h2>
+      <p>Email : <a href="mailto:ton.email@exemple.com" class="text-blue-600">ton.email@exemple.com</a></p>
+      <p>LinkedIn : <a href="https://linkedin.com/in/tonprofil" class="text-blue-600">linkedin.com/in/tonprofil</a></p>
+      <p>GitHub : <a href="https://github.com/tonpseudo" class="text-blue-600">github.com/tonpseudo</a></p>
     </section>
+  </main>
 
-    <section class="section">
-      <h2>Informations pratiques</h2>
-      <p><strong>Localisation</strong> : Île-de-France (Télétravail ou hybride)</p>
-      <p><strong>TJM</strong> : à partir de 350 € / jour</p>
-      <p><strong>Langues</strong> : Français / Anglais (technique écrit)</p>
-      <p><strong>Statut</strong> : Auto-entrepreneur</p>
-    </section>
-  </div>
-
-  <footer>
-    <p>© 2025 - DOLBEAU Romain | Développeur Logiciel Freelance</p>
+  <footer class="bg-gray-200 text-center p-4 text-sm">
+    © 2025 - Développeur Freelance | Portfolio personnel
   </footer>
+
 </body>
 </html>
